@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_build_black_24dp"
+            android:title="Settings" />
+
+
+        <item
+            android:id="@+id/nav_contact_us"
+            android:icon="@drawable/ic_call_black_24dp"
+            android:title="Contact Us" />
+
+        <item
+            android:id="@+id/nav_log_out"
+            android:icon="@drawable/ic_settings_power_black_24dp"
+            android:title="Logout" />
+
+
+</menu>

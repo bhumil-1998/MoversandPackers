@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    tools:context="com.example.jolly.moversandpackers.Shifting">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+    <Button
+        android:text="Date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/date_picker"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/tmp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:visibility="invisible"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_marginStart="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Source"
+                android:layout_marginEnd="12dp"
+                android:layout_gravity="center"
+                android:textSize="24sp"
+                android:layout_marginTop="12dp"
+                android:layout_below="@+id/date_picker"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/source_text" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_below="@+id/source_text"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp"
+                android:background="@android:color/darker_gray"
+                android:id="@+id/view" />
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true"
+                    android:textSize="20sp"
+                    android:layout_marginTop="12dp"
+                    android:hint="Locality"
+                    android:layout_marginEnd="12dp"
+                    android:id="@+id/locality_source" />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textInputLayout_source"
+                android:layout_below="@+id/view"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp">
+
+            </android.support.design.widget.TextInputLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Floor"
+                    android:layout_weight="0.50"
+                    android:textSize="20sp"
+                    android:id="@+id/floor_source"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_below="@+id/textInputLayout_source"
+                    android:layout_alignParentStart="true" />
+
+                <Button
+                    android:layout_width="40dp"
+                    android:layout_weight="0"
+                    android:layout_height="40dp"
+                    android:id="@+id/plus_source"
+                    android:layout_marginStart="1dp"
+                    android:text="+"
+                    android:layout_alignBaseline="@+id/textView4"
+                    android:layout_alignBottom="@+id/textView4"
+                    android:layout_toEndOf="@+id/source_text"
+                    android:onClick="increment_source"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="2"
+                    android:id="@+id/source_edit_floor"
+                    android:enabled="false"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_alignTop="@+id/minus_source"
+                    android:layout_toStartOf="@+id/switch_source" />
+
+
+                <Button
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/minus_source"
+                    android:text="-"
+                    android:onClick="decrement_source"
+                    android:layout_weight="0"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_alignBaseline="@+id/plus_source"
+                    android:layout_alignBottom="@+id/plus_source"
+                    android:layout_alignParentEnd="true" />
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_marginTop="30dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lift Available"
+                    android:textSize="20sp"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="12dp"
+                    android:id="@+id/textView_lift_source"
+                    android:layout_alignBottom="@+id/switch_source"
+                    android:layout_alignStart="@+id/textView4" />
+
+
+                <Switch
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="0.14"
+                    android:onClick="onSwitchClick"
+                    android:id="@+id/switch_source"
+                    android:layout_marginEnd="22dp"
+                    android:layout_below="@+id/view"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="31dp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Destination"
+            android:textSize="24sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+         android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_below="@+id/date_picker"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/destination_text" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_below="@+id/source_text"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="12dp"
+            android:background="@android:color/darker_gray"
+            android:id="@+id/view2" />
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:id="@+id/textInputLayout_destination"
+            android:layout_below="@+id/view"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="12dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:textSize="20sp"
+            android:layout_marginTop="12dp"
+            android:hint="Locality"
+            android:layout_marginEnd="12dp"
+            android:id="@+id/locality_destination" />
+
+        </android.support.design.widget.TextInputLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Floor"
+                android:layout_weight="0.50"
+                android:textSize="20sp"
+                android:id="@+id/textV"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="2dp"
+                android:layout_below="@+id/textInputLayout_source"
+                android:layout_alignParentStart="true" />
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_weight="0"
+                android:layout_height="40dp"
+                android:id="@+id/plus_destination"
+                android:text="+"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="1dp"
+                android:layout_alignBaseline="@+id/textView4"
+                android:layout_alignBottom="@+id/textView4"
+                android:layout_toEndOf="@+id/source_text"
+                android:onClick="increment_destination"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="2"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="12dp"
+                android:id="@+id/destination_edit_floor"
+                android:enabled="false"
+                android:text="0"
+                android:layout_alignTop="@+id/minus_source"
+                android:layout_toStartOf="@+id/switch_source" />
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/minus_destination"
+                android:text="-"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:onClick="decrement_destination"
+                android:layout_weight="0"
+                android:layout_alignBaseline="@+id/plus_source"
+                android:layout_alignBottom="@+id/plus_source"
+                android:layout_alignParentEnd="true" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lift Available"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="12dp"
+                android:textSize="20sp"
+                android:id="@+id/textView_lift_destination"
+                android:layout_alignBottom="@+id/switch_source"
+                android:layout_alignStart="@+id/textView4" />
+
+
+
+            <Switch
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="0.14"
+                android:onClick="onSwitchClick"
+                android:layout_marginStart="12dp"
+                android:id="@+id/switch_destination"
+                android:layout_marginEnd="12dp"
+                android:layout_below="@+id/view"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="13dp" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/submit"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:text="submit"/>
+    </LinearLayout>
+
+</ScrollView>

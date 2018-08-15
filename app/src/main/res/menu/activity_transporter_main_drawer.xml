@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_profile_transporter"
+            android:icon="@drawable/ic_account_box_black_24dp"
+            android:title="Profile" />
+        <item
+            android:id="@+id/nav_sign_out_transporter"
+            android:icon="@drawable/ic_settings_power_black_24dp"
+            android:title="Sign out" />
+         </group>
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_call_black_24dp"
+                android:title="Contact us" />
+        </menu>
+    </item>
+
+</menu>

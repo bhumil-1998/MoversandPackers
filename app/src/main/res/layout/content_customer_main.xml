@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.jolly.moversandpackers.Customer_main"
+    tools:showIn="@layout/app_bar_customer_main"
+    android:background="#BDBDBD">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.0"
+        android:padding="8dp">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.50"
+            android:background="@android:color/white"
+            android:layout_margin="8dp">
+            <Button
+                android:id="@+id/cust_main_btn_request"
+                style="@style/HomeButton"
+                android:onClick="onButtonClicker"
+                android:layout_marginTop="40dp"
+                android:text="View Request"
+                android:drawableTop="@drawable/favicon"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.50"
+            android:background="@android:color/white"
+            android:layout_margin="8dp">
+            <Button
+                android:id="@+id/cust_main_btn_quotation"
+                style="@style/HomeButton"
+                android:layout_marginTop="40dp"
+                android:drawableTop="@drawable/quotation"
+                android:onClick="onButtonClicker"
+                android:text="Quotation"
+                android:layout_height="159dp" />
+        </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.50"
+                android:background="@android:color/white"
+                android:layout_margin="8dp">
+                <Button
+                    android:id="@+id/cust_main_btn_send_request"
+                    style="@style/HomeButton"
+                    android:onClick="onButtonClicker"
+                    android:layout_marginTop="40dp"
+                    android:text="Send Request"
+                    android:drawableTop="@drawable/sendreq"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.50"
+                android:background="@android:color/white"
+                android:layout_margin="8dp">
+                <Button
+                    android:id="@+id/cust_main_btn_order"
+                    style="@style/HomeButton"
+                    android:layout_marginTop="40dp"
+                    android:drawableTop="@drawable/orders"
+                    android:onClick="onButtonClicker"
+                    android:text="Order"
+                    android:layout_height="159dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_quotation_transporter_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#BDBDBD"
+    tools:context="com.example.jolly.moversandpackers.Transporter.Quotation_transporter_detail">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@android:color/white"
+        android:layout_marginBottom="8dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@android:color/white"
+            android:layout_marginBottom="8dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:paddingTop="8dp">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="Name"
+                    android:layout_weight="0.50"
+                    android:textAlignment="textStart"
+                    android:textStyle="bold"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="8dp">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.50">
+
+                    <TextView
+                        android:text="Quotated On"
+                        android:textSize="@dimen/text_size_list_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.50"
+                        android:layout_marginStart="8dp"/>
+
+                    <TextView
+                        android:id="@+id/date_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.50"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="12dp"/>
+                </LinearLayout>
+                <LinearLayout
+
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.50">
+
+                    <TextView
+                        android:text="Quotation Number"
+                        android:textSize="@dimen/text_size_list_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.50"
+                        android:layout_marginStart="1dp"/>
+
+                    <TextView
+                        android:id="@+id/quotation_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.50"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="12dp"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="8dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total Price"
+                        android:textSize="16sp"
+                        android:layout_weight="0.50"
+                        android:layout_marginStart="8dp"/>
+
+                    <TextView
+                        android:id="@+id/price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.69"
+                        android:text="Price"
+                        android:textSize="20sp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:background="@android:color/white"
+        android:layout_margin="8dp"
+        >
+        <TextView
+            android:id="@+id/Itemid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.50"
+            android:textSize="20dp"
+            android:textColor="@android:color/black"
+            android:layout_alignParentTop="true"
+            android:text="Item Name"
+            android:textStyle="bold"
+            android:padding="16dp"/>
+
+        <TextView
+            android:id="@+id/Quantityid"
+            android:layout_width="match_parent"
+            android:textSize="20dp"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="Quantity"
+            android:layout_alignParentTop="true"
+            android:padding="16dp"
+            android:layout_weight="0.50"
+            android:textStyle="bold"
+            android:textAlignment="textEnd"/>
+    </LinearLayout>
+    <ListView
+        android:id="@+id/quotation_listview_transporter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="#BDBDBD"
+        android:dividerHeight="5dp"
+        android:background="#BDBDBD"
+        android:layout_weight="0.90" />
+
+
+</LinearLayout>
+</LinearLayout>
